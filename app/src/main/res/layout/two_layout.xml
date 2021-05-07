@@ -29,29 +29,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.007">
 
-            <Button
-                android:id="@+id/b1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Общее"></Button>
 
-            <Button
-                android:id="@+id/b2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Иконка"></Button>
-
-            <Button
-                android:id="@+id/b3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Заголовок"></Button>
-
-            <Button
-                android:id="@+id/b4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Слоган"></Button>
         </Spinner>
     </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.constraintlayout.widget.ConstraintLayout

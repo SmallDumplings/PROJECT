@@ -16,6 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
+        <activity android:name=".DialogFragment">
+            <intent-filter>
+                <action android:name="android.intent.action.DIALOG" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            android:theme="@style/Theme.AppCompat.Dialog";>
+        </activity>
+    </application>
 </manifest>

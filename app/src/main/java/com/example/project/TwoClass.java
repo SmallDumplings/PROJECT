@@ -1,5 +1,6 @@
 package com.example.project;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,28 +21,16 @@ public class TwoClass extends AppCompatActivity {
         setContentView(R.layout.two_two_layout);
 
 
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TwoClass.this, DialogFragment.class);
+                startActivity(intent);
+
+            }
+        });
     }
-    public void Change(View view){
-        Fragment fragment=null;
-        switch (view.getId()){
-            case R.id.b1:
-                fragment = new oneFragment();
-                break;
-            case R.id.b2:
-                fragment = new twoFragment();
-                break;
-            case R.id.b3:
 
-                break;
-            case R.id.b4:
-                break;
 
-        }
-        FragmentManager fm = getSupportFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
-        ft.replace(R.id.f1, fragment);
-        ft.commit();
-
-    }
 
 }

@@ -27,7 +27,7 @@ public class DialogFragment extends AppCompatActivity {
                 fragment = new one_oneFragment();
                 break;
             case R.id.bb2:
-                //fragment = new ();
+                fragment = new Fragment_two();
                 break;
             case R.id.bb3:
 

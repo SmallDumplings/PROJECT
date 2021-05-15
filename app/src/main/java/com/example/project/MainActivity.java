@@ -3,11 +3,13 @@ package com.example.project;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -22,15 +24,25 @@ public class MainActivity extends AppCompatActivity {
     private TextInputLayout mTextInputLayout;
     private EditText mEditText;
 
+    Button start;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.two_srat_layout);
 
         mTextInputLayout = (TextInputLayout) findViewById(R.id.textInputLayout);
         mEditText = (EditText) findViewById(R.id.editTextName);
 
         mEditText.setOnEditorActionListener(ActionListener.newInstance(this));
+        start=findViewById(R.id.start);
+        start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TwoClass.class);
+                startActivity(intent);
+            }
+        });
 
     }
     private boolean shouldShowError() {
